@@ -3,7 +3,7 @@
 from typing import Callable
 
 
-def split_dict(dict_to_split: dict, sort_function: Callable):
+def dict_splitter(dict_to_split: dict, sort_function: Callable):
     """
     :param dict_to_split: what to split
     :param sort_function: how to split function
@@ -34,7 +34,7 @@ if __name__ == '__main__':
         "Guest8": {"Name": "Daria", "Sex": "female"}
     }
 
-    males, females = split_dict(guests, lambda item: item[1]["Sex"] == "male")
+    males, females = dict_splitter(guests, lambda item: item[1]["Sex"] == "male")
 
     print("Male guests:")
     for i in males.items():
